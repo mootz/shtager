@@ -1,0 +1,346 @@
+@import config
+
+body
+    &::-webkit-scrollbar
+        width: 5px
+
+    &::-webkit-scrollbar-track
+        background-color: #F1EBE8
+
+    &::-webkit-scrollbar-thumb
+        background-color: darken($accent, 30%)
+
+    &::after
+        transition: all 0.4s
+        content: ''
+        background: rgba(0, 0, 0, 0.03)
+        opacity: 0
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 1
+        pointer-events: none
+
+    &.menu-active
+        overflow: hidden
+
+        .header__list
+            opacity: 0
+
+        &::after
+            opacity: 1
+
+        main
+            pointer-events: none
+
+html
+    scroll-behavior: smooth
+
+.section
+    margin: 0 auto 132px
+    width: 100%
+    max-width: 1440px
+    box-sizing: border-box
+    padding: 0 96px
+
+    &__title
+        font-size: 32px
+        line-height: 30px
+        font-weight: 500
+        letter-spacing: 0.02em
+
+    @media screen and (max-width: 1440px)
+        padding: 0 120px
+
+        &__number
+            left: 20px
+
+    @media screen and (max-width: 1200px)
+        padding: 0 90px
+        margin: 0 auto 100px
+
+        &__title
+            font-size: 26px
+
+    @media screen and (max-width: 992px)
+        padding: 0 50px
+        margin-bottom: 70px
+
+        &__title
+            font-size: 24px
+
+    @media screen and (max-width: 768px)
+        padding: 0 36px
+        margin-bottom: 60px
+
+    @media screen and (max-width: 576px)
+        padding: 0 30px
+        margin-bottom: 48px
+
+        &__title
+            font-size: 20px
+            line-height: 24px
+
+    @media screen and (max-width: 400px)
+        padding: 0 16px
+
+        &__title
+            font-size: 18px
+            line-height: 22px
+
+.page
+    &__title
+        margin-bottom: 40px
+
+        @media screen and (max-width: 992px)
+            margin-bottom: 30px
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-bullet
+    &:focus,
+    &:active
+        outline: 0
+
+.nice-select
+    border-color: $bordercolor
+    &::after
+        border-color: $accent
+
+    &:hover
+        // border-color: #B2A393
+
+    &:active
+        // border-color: #7C6656
+
+.header
+    display: flex
+    align-items: flex-end
+    padding-top: 32px
+
+    &__menu
+        width: 30px
+        height: 22px
+        border: 0
+        border-radius: 0
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        padding: 2px
+        cursor: pointer
+        background: transparent
+        transition: all 0.4s
+        position: relative
+        z-index: 3
+        margin-right: 50px
+
+        span
+            width: 28px
+            background: $grey
+            transition: all 0.4s
+            height: 2px
+
+        &:focus,
+        &:active
+            outline: 0
+
+        &.active
+            span:first-child
+                transform: translate3d(0,3px,0) rotate(225deg)
+
+            span:last-child
+                transform: translate3d(0,-3px,0) rotate(-225deg)
+
+    &__logo
+        width: 412px
+        max-height: 60px
+        margin-left: 52px
+        height: fit-content
+
+        img
+            width: 100%
+            object-fit: contain
+
+    &__list
+        display: flex
+        transition: all 0.4s
+
+    &__item
+        color: $grey
+        line-height: 22px
+        transition: all 0.2s
+        margin-right: 46px
+
+        &:last-child
+            margin-right: 0
+
+        &:hover
+            color: $hoverlink
+
+    &__store
+        margin-left: auto
+
+    @media screen and ( max-width: 1440px )
+        &__item
+            margin-right: 18px
+
+    @media screen and ( max-width: 1300px )
+        &__item
+            margin-right: 16px
+
+        &__menu
+            margin-right: 22px
+
+    @media screen and ( max-width: 1230px )
+        &__logo
+            margin-left: 22px
+
+    @media screen and ( max-width: 1120px )
+        &__logo
+            width: 342px
+
+    @media screen and ( max-width: 1040px )
+        &__logo
+            margin-left: 0
+
+    @media screen and ( max-width: 992px )
+        justify-content: center
+        align-items: center
+
+        &__menu
+            margin-right: auto
+
+        &__logo
+            margin-right: auto
+            margin-left: -30px
+            width: 400px
+
+        &__list,
+        &__store
+            display: none
+
+    @media screen and ( max-width: 768px )
+        padding-top: 28px
+        &__logo
+            width: 340px
+
+    @media screen and ( max-width: 480px )
+        &__logo
+            width: 300px
+
+    @media screen and ( max-width: 400px )
+        &__logo
+            width: 240px
+
+.menu
+    z-index: 2
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    transform: translateX(-100%)
+    transition: all 0.4s
+    width: 468px
+    background: #fff
+    padding: 120px 80px 20px
+    display: flex
+    justify-content: center
+
+    &.active
+        transform: translateX(0)
+
+    &__list
+        height: 100%
+        display: flex
+        flex-direction: column
+        overflow-y: auto
+        &::-webkit-scrollbar
+            width: 5px
+
+        &::-webkit-scrollbar-track
+            background-color: #F1EBE8
+
+        &::-webkit-scrollbar-thumb
+            background-color: darken($accent, 30%)
+
+    &__link
+        line-height: 21px
+        display: block
+        transition: all 0.2s
+        color: $grey
+        max-width: 140px
+
+        &:hover
+            color: $hoverlink
+
+    &__item
+        margin-bottom: 36px
+
+    &__last-item
+        margin-bottom: 20px
+
+    &__socials
+        display: flex
+        margin-top: auto
+
+    &__social
+        margin-left: 16px
+        &:first-child
+            margin-left: 0
+            a
+                padding-bottom: 0
+                padding-top: 6px
+
+        &:nth-child(3)
+            margin-left: 16px
+
+    &__social-link
+        width: 24px
+        height: 24px
+        background: $grey
+        padding: 3px
+        display: flex
+        align-items: center
+        justify-content: center
+
+        svg
+            width: 100%
+            height: 100%
+
+        path
+            fill: #ffffff
+
+        path.fill-other
+            fill: #a4a4a4
+
+
+    @media screen and (max-width: 1440px)
+        width: 382px
+
+        &__item
+            margin-bottom: 20px
+
+    @media screen and (max-width: 1200px)
+        width: 328px
+        padding: 120px 60px 20px
+
+    @media screen and ( max-width: 1120px )
+        padding-top: 110px
+
+    @media screen and ( max-width: 992px )
+        padding: 100px 40px 20px
+        width: 256px
+
+    @media screen and (max-width: 768px)
+        width: 100%
+
+        &__link
+            max-width: 100%
+
+    @media screen and (max-width: 576px)
+        padding: 60px 30px 20px
+
+    @media screen and (max-width: 350px)
+        padding: 60px 13px 20px

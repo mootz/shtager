@@ -1,0 +1,86 @@
+// USER VARIABLES SECTION
+
+$accent: #fff6d4 // Accent Color
+$fontsize: 17px // Body Font Size
+$textcolor: #000000 // Text Color
+$titlecolor: #faeadf
+$grey: #878787
+$hoverlink: #000000
+$bordercolor: #878787
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$montserrat: 'CeraPro', -apple-system, BlinkMacSystemFont, Arial, sans-serif // Manrope Font Family
+
+
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 20px
+// $gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+    @font-face
+        font-family: $fname
+        font-style: $fstyle
+        font-weight: $fweight
+        font-display: swap // Uncomment to initially display system fonts
+        src: local($fname), url($furl) format('woff2')
+
+@include font('CeraPro', normal, 400, '../fonts/CeraPro/CeraPro-Regular.woff2')
+@include font('CeraPro', italic, 400, '../fonts/CeraPro/CeraPro-RegularItalic.woff2')
+@include font('CeraPro', normal, 500, '../fonts/CeraPro/CeraPro-Medium.woff2')
+@include font('CeraPro', normal, 700, '../fonts/CeraPro/CeraPro-Bold.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+    color: #666
+
+::selection
+    background-color: $accent
+    color: #fff
+
+input, textarea
+    outline: none
+    &:focus:required:invalid
+        border-color: red
+    &:required:valid
+        border-color: green
+
+body
+    font-family: $montserrat
+    font-size: $fontsize
+    min-width: 320px
+    position: relative
+    line-height: 24px
+    overflow-x: hidden
+    color: $textcolor
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    letter-spacing: 0.02em
+
+a
+    text-decoration: none
+    color: currentColor
+
+    &:active
+        outline: none
+
+p
+    margin: 0
+
+h1,h2,h3,h4,h5
+    margin: 0
+
+ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+*
+    box-sizing: border-box
