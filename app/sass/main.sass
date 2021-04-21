@@ -764,7 +764,7 @@ html
 
 .exhibitions
     &__block
-        padding: 102px 0
+        padding-top: 102px
         border-bottom: 1px solid $grey
 
         &:last-child
@@ -784,6 +784,7 @@ html
         color: $grey
         font-size: 16px
         line-height: 20px
+        margin-bottom: 102px
 
     &__items
         display: flex
@@ -792,7 +793,7 @@ html
         margin-top: 62px
 
     &__item
-        width: calc(33% - 12px)
+        width: calc(32.9% - 12px)
         margin-right: 24px
         margin-bottom: 84px
 
@@ -807,9 +808,9 @@ html
 
     &__img-wrap
         width: 100%
+        display: flex
 
         img
-            max-width: 400px
             width: 100%
             object-fit: cover
 
@@ -832,5 +833,119 @@ html
 
     &__ps
         margin-top: 10px
+
+    @media screen and ( max-width: 1440px )
+        &__title
+            font-size: 24px
+            line-height: 30px
+
+
+        &__block
+            padding-top: 80px
+
+        &__placeholder
+            margin-bottom: 80px
+
+        &__name
+            font-size: 20px
+
+        &__by
+            font-size: 16px
+
+        &__items
+            margin-top: 40px
+
+    @media screen and ( max-width: 1200px )
+        &__block
+            padding-top: 70px
+
+        &__placeholder
+            margin-bottom: 70px
+        &__item
+            width: calc(32.8% - 12px)
+
+    @media screen and ( max-width: 992px )
+        &__title
+            font-size: 22px
+            line-height: 28px
+
+        &__placeholder
+            font-size: 14px
+            line-height: 18px
+
+        &__block
+            padding-top: 60px
+
+        &__placeholder
+            margin-bottom: 60px
+        &__item
+            width: calc(50% - 12px)
+            margin-right: 0
+            margin-bottom: 60px
+
+            &:nth-last-child(-n+3)
+                margin-bottom: 60px
+
+            &:nth-last-child(-n+2)
+                margin-bottom: 0
+
+    @media screen and ( max-width: 768px )
+        &__items
+            margin-top: 30px
+
+        &__title
+            font-size: 20px
+            line-height: 26px
+
+        &__block
+            padding-top: 54px
+
+        &__placeholder
+            margin-bottom: 54px
+            margin-top: 26px
+
+        &__name
+            font-size: 16px
+            line-height: 20px
+            margin-top: 20px
+
+        &__by
+            font-size: 14px
+            line-height: 15px
+
+        &__date,
+        &__ps
+            margin-top: 16px
+            font-size: 12px
+            line-height: 12px
+
+        &__ps
+            margin-top: 8px
+
+    @media screen and ( max-width: 576px )
+        &__items
+            margin-top: 26px
+
+        &__title
+            font-size: 18px
+            line-height: 24px
+
+        &__placeholder
+            font-size: 14px
+            line-height: 18px
+
+        &__item
+            width: 100%
+            margin-bottom: 44px
+
+            &:nth-last-child(-n+3)
+                margin-bottom: 44px
+
+            &:nth-last-child(-n+2)
+                margin-bottom: 44px
+
+            &:last-child
+                margin-bottom: 0
+
 
 
