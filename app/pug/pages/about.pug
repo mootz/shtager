@@ -1,0 +1,38 @@
+extends ../layout/default
+
+block content
+    .about.section
+        ._main-img
+            img(src="img/about.jpg", alt="About")
+
+        ._main-desc Alexander Shishkin-Hokusai. Storming. Total installation of 43 flat sculptures. 2017
+
+        ._text-content
+            p
+                | The Shtager Gallery specialises in Russian and international contemporary art and has been active in London since 2016. Bringing expertise from St Petersburg, the cultural free-thinking capital of Russia, the founder Marina Shtager continues to introduce to the British public, an important range of contemporary Russian and international artists. Establishment and sustainment of an elevating dialogue between Eastern European, Russian and international artistic practices are one of the core aims of the Shtager Gallery’s programme, alongside promoting collaboration, mutual understanding and crossover synergies. Building creative bridges between concepts and contexts, in which the artists are operating, allow the registering of the aesthetic nuances and sensitivities hidden from the naked eye.
+
+            p
+                | The Shtager Gallery shares its exhibition space with Morris Associates, a prominent museum exhibition design consultancy, with its studio headquarters in the Elephant & Castle. They develop exhibition design projects for amongst others, the Metropolitan, the British Museum or the State Hermitage. Now, many visitors find it intriguing to visit a gallery within a fully operational exhibition design bureau. It certainly adds a measure of intrigue and spice to their visit – they find themselves right in the midst of the action. It is unique and totally memorable.
+
+
+    .about-slider.section
+        ._container.swiper-container
+            ._wrapper.swiper-wrapper
+
+                - for(var i = 1; i < 12; i++)
+                    a(href='img/about-slider/' + i + '.jpg')._slide.swiper-slide
+                        img(src='img/about-slider/' + i + '.jpg' alt="gallery")
+
+
+    .about-partners.section
+        ._wrap
+            a(href="#")._item.about-partners__item--1
+                img(src="img/partners/1.png", alt="partner")
+
+            a(href="#")._item.about-partners__item--2
+                img(src="img/partners/2.png", alt="partner")
+
+            a(href="#")._item.about-partners__item--3
+                img(src="img/partners/3.jpg", alt="partner")
+
+

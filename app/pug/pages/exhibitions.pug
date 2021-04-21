@@ -1,7 +1,7 @@
 extends ../layout/default
 
 block content
-    .section
+    .exhibitions.section
         .main-slider
 
             ._container.swiper-container
@@ -39,4 +39,35 @@ block content
 
 
                 ._pagination.swiper-pagination
+
+        ._block
+            h2._title Current
+
+            p._placeholder There is no exhibition currently open.
+
+        ._block
+            h2._title Upcoming
+
+            p._placeholder Future exhibitions to be announced.
+
+        ._block
+            h2._title Past
+
+            //- TODO: IMG NEED 400x400 (for october imgresize)
+
+            ._items
+                - for(var i = 1; i < 12; i++)
+                    ._item
+                        ._img-wrap
+                            img(src="img/exhibitions-item.jpg", alt="exhibition past")
+
+                        ._name Drawing & Digital
+
+                        ._by Marina Alexeeva, Alexander Shishkin-Hokusai
+
+                        ._date March 7, 2020 – May 30, 2020
+
+                        ._ps This exhibition is linked to the lecture series taking place in the Saatchi Gallery, organised by The Hermitage Foundation UK
+
+
 
