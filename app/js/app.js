@@ -18,6 +18,19 @@ $(document).ready(function () {
         })
     })
 
+
+    $('[data-fancybox="slider-gallery"]').fancybox({
+        selector: '.about-slider__slide',
+        backFocus: false,
+        loop: true,
+        observer: true,
+        infobar: false,
+        observeParents: true,
+        buttons: [
+            "close"
+        ]
+    });
+
     if (document.querySelector('.main-slider__container')) {
         const mainSlider = new Swiper('.main-slider__container', {
             loop: true,
@@ -62,17 +75,59 @@ $(document).ready(function () {
                 }
             }
         });
+    }
 
-        $().fancybox({
-            selector: '.about-slider__slide',
-            backFocus: false,
-            loop: true,
-            observer: true,
-            infobar: false,
-            observeParents: true,
-            buttons: [
-                "close"
-            ]
+    if (document.querySelector('.g-slider-1__container')) {
+        const aboutSlider = new Swiper('.g-slider-1__container', {
+            loop: false,
+            speed: 600,
+            spaceBetween: 50,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.g-slider-1__next',
+                prevEl: '.g-slider-1__prev',
+            },
+            breakpoints: {
+                768: {
+                    spaceBetween: 10
+                },
+                992: {
+                    spaceBetween: 30
+                },
+                1200: {
+                    spaceBetween: 50
+                }
+            }
         });
+    }
+
+    if (document.querySelector('.g-slider-2__container')) {
+        const aboutSlider = new Swiper('.g-slider-2__container', {
+            loop: false,
+            speed: 600,
+            spaceBetween: 50,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.g-slider-2__next',
+                prevEl: '.g-slider-2__prev',
+            },
+        });
+    }
+
+    if (document.querySelector('.d-exh__desc-text')) {
+        let paragraphs = document.querySelectorAll('.d-exh__desc-text > *')
+        let btnMore = document.querySelector('.d-exh__btn-more')
+
+        btnMore.addEventListener('click', function () {
+            paragraphs.forEach((e, index) => {
+                let height = e.scrollHeight
+                if (index + 1 !== paragraphs.length) {
+                    e.classList.add('mb')
+                }
+                e.style.height = `${height}px`
+
+            })
+            this.style.display = 'none'
+        })
     }
 });
