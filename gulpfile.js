@@ -152,10 +152,10 @@ function cleandist() {
 
 function startwatch() {
     // Выбираем все файлы JS в проекте, а затем исключим с суффиксом .min.js
-    watch(['app/**/*.js', '!app/**/*.min.js'], scripts);
+    watch(['app/**/*.js', '!app/**/*.min.js'], {usePolling: true}, scripts);
 
     // Мониторим файлы препроцессора на изменения
-    watch('app/**/' + preprocessor + '/**/*', styles);
+    watch('app/**/' + preprocessor + '/**/*', {usePolling: true}, styles);
 
     // Мониторим файлы HTML на изменения
     watch('app/**/*.html').on('change', browserSync.reload);
@@ -164,7 +164,7 @@ function startwatch() {
     watch('app/**/*.pug').on('change', series('pugTask'));
 
     // Мониторим папку-источник изображений и выполняем images(), если есть изменения
-    watch('app/images/src/**/*', images);
+    watch('app/images/src/**/*', {usePolling: true}, images);
 }
 
 // Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.

@@ -115,19 +115,47 @@ $(document).ready(function () {
     }
 
     if (document.querySelector('.d-exh__desc-text')) {
-        let paragraphs = document.querySelectorAll('.d-exh__desc-text > *')
-        let btnMore = document.querySelector('.d-exh__btn-more')
+        let btnMore = document.querySelectorAll('.d-exh__btn-more')
+        btnMore.forEach(e => {
+            let paragraphs = [...e.previousElementSibling.children]
 
-        btnMore.addEventListener('click', function () {
-            paragraphs.forEach((e, index) => {
-                let height = e.scrollHeight
-                if (index + 1 !== paragraphs.length) {
-                    e.classList.add('mb')
-                }
-                e.style.height = `${height}px`
+            if (paragraphs.length > 1) {
+                e.addEventListener('click', function () {
+                    console.log(paragraphs);
 
-            })
-            this.style.display = 'none'
+                    paragraphs.forEach((e, index) => {
+                        let height = e.scrollHeight
+                        if (index + 1 !== paragraphs.length) {
+                            e.classList.add('mb')
+                        }
+                        e.style.height = `${height}px`
+                    })
+                    e.style.display = 'none'
+                })
+
+            } else {
+                e.style.display = 'none'
+            }
         })
+    }
+
+    if (document.querySelector('.contacts')) {
+        let displayNone = setInterval(() =>{
+            let link = document.querySelector('.eapps-link')
+            let postLink = document.querySelectorAll('[eapps-link]')
+            postLink.forEach(e => {
+                e.removeAttribute('eapps-link')
+            })
+            link.style.display = 'none'
+            console.clear();
+        }, 500);
+
+        setTimeout(() => { clearInterval(displayNone);}, 6000);
+    }
+
+    if (document.location.hash == '#sub' || document.querySelector('.contacts')) {
+        setTimeout(() => {
+            window.scrollTo(0,document.body.scrollHeight);
+        }, 1000);
     }
 });

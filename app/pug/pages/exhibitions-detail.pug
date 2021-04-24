@@ -1,6 +1,15 @@
 extends ../layout/default
 
 block content
+    .breadcrumbs.section
+        ul._list
+            li._item
+                a(href="#overview") Overview
+
+            li._item
+                a(href="#views") Installation Views
+
+
     .d-exh.section
         ._video
             video(controls muted)
@@ -14,7 +23,7 @@ block content
 
         p._min-desc Curators: Marina Shtager, Denis Maksimov
 
-        ._columns
+        ._columns#overview
             ._column
                 ._info
                     p._overview.d-ex__title Overview
@@ -44,7 +53,7 @@ block content
 
                 ._btn-more + View more
 
-    .g-slider.section
+    .g-slider.section#views
         ._columns
             ._column
                 h2._name.d-ex__title Installation Views

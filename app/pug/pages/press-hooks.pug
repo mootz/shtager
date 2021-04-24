@@ -1,0 +1,18 @@
+extends ../layout/default
+
+block content
+    .exhibitions.art-fairs.section.press-hooks
+        ._block
+            h2.art-fairs__title.section__title Press-hooks
+
+            ._items
+                - for(var i = 1; i < 5; i++)
+                    a(href="#")._item
+                        ._img-wrap
+                            img(src='img/art-fairs-' + i + '.png' alt="gallery")
+
+                        ._name Drawing & Digital
+
+                        ._by Marina Alexeeva, Alexander Shishkin-Hokusai
+
+                        ._date March 7, 2020 – May 30, 202
