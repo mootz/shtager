@@ -1,0 +1,62 @@
+.m-product#m-product
+    p._title.d-ex__title Enquiry form
+
+    form
+        ._info
+            ._img-wrap
+                img(src="img/product-img.jpg")
+
+            ._info-wrap
+                p._author.m-product__info-text Katia Kesic
+                p._name.m-product__info-text Let Me Tell You What Happens Next, 2019
+                p._desc.m-product__info-text Underglaze on stoneware clay, chain, glass eye
+                p._size.m-product__info-text 34 x 33 x 33 cm
+
+        ._item
+            label(for="name")._label Name*
+            input(type="text" name="name" id="name" required)._input.m-product__input-item
+
+        ._item
+            label(for="name")._label Email*
+            input(type="email" name="email" id="email" required)._input.m-product__input-item
+
+        ._item
+            label(for="phone")._label Phone
+            input(type="number" name="phone" id="phone")._input.m-product__input-item
+
+        ._item
+            label(for="message")._label Message
+            textarea(type="text" name="message" id="message")._input.m-product__input-item.m-product__message
+
+        ._item.m-product__item-radios
+            p._label Receive
+                |
+                | newsletters*
+
+            ._radios.m-product__input-item
+                label
+                    input(type="radio" name="newsletters")
+                    span Yes
+
+                label
+                    input(type="radio" name="newsletters")
+                    span No
+
+        button._button.button(type="submit") Send enquiry
+
+
+        p._bottom In order to respond to your enquiry, we will process the personal data you have supplied in accordance with our privacy policy (available on request). You can unsubscribe or change your preferences at any time by clicking the link in our emails.
+
+.m-sub
+    ._close ×
+    form.contacts__form
+        .contacts__f-items
+            .contacts__f-item
+                input(type="text" name="m-name" placeholder="First name")
+            .contacts__f-item
+                input(type="text" name="m-lastname" placeholder="Last name")
+            .contacts__f-item
+                input(type="email" name="m-email" placeholder="Email")
+
+
+        button._button.button(type="submit") Sign up

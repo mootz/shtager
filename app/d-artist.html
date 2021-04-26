@@ -12,7 +12,7 @@
 	<body>
 		<header class="header section">
 			<button class="header__menu"><span></span><span></span></button>
-			<div class="header__list"><a class="header__item" href="#">About</a><a class="header__item" href="#">Artists</a><a class="header__item" href="#">Exhibitions</a></div><a class="header__logo" href="/"><img src="img/logo.png" alt="Логотип"></a><a class="header__item header__store" href="#">E-STORE</a>
+			<div class="header__list"><a class="header__item" href="#">About</a><a class="header__item" href="#">Artists</a><a class="header__item" href="#">Exhibitions</a></div><a class="header__logo" href="/"><img src="img/logo.png" alt="Логотип"></a><a class="header__item header__store" href="#">E-Store</a>
 		</header>
 		<nav class="menu">
 			<ul class="menu__list">
@@ -21,7 +21,7 @@
 				<li class="menu__item"><a class="menu__link" href="#">Exhibitions</a></li>
 				<li class="menu__item"><a class="menu__link" href="#">News</a></li>
 				<li class="menu__item"><a class="menu__link" href="#">Fairs</a></li>
-				<li class="menu__item"><a class="menu__link" href="#">Elephant Platform</a></li>
+				<li class="menu__item"><a class="menu__link" href="#">Elephant platform</a></li>
 				<li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
 				<li class="menu__item menu__last-item"><a class="menu__link" href="#">Press-hooks</a></li>
 				<li class="menu__socials">
@@ -154,13 +154,76 @@
 								</svg></a></li>
 					</ul>
 				</div>
-				<div class="footer__column"><a class="footer__footer-text" href="contacts.html#sub">Join our newsletter</a></div>
-				<div class="footer__column"><a class="footer__footer-text footer__last-links" href="#">Address</a><a class="footer__footer-text" href="#">Contact</a></div>
+				<div class="footer__column footer__dn-contact"><a class="footer__footer-text" href="contacts.html#sub">Join our newsletter</a></div>
+				<div class="footer__column"><a class="footer__footer-text footer__last-links" href="contacts.html">Address</a><a class="footer__footer-text" href="contacts.html">Contact</a></div>
 			</div>
 			<div class="footer__info-block">
 				<p class="footer__rights">© 2021 Shtager Gallery © The Artist. All Rights Reserved.</p><a class="footer__privacy" href="#">Privacy Policy</a>
 			</div>
 		</footer>
+		<div class="m-product" id="m-product">
+			<p class="m-product__title d-ex__title">Enquiry form</p>
+			<form>
+				<div class="m-product__info">
+					<div class="m-product__img-wrap"><img src="img/product-img.jpg"></div>
+					<div class="m-product__info-wrap">
+						<p class="m-product__author m-product__info-text">Katia Kesic</p>
+						<p class="m-product__name m-product__info-text">Let Me Tell You What Happens Next, 2019</p>
+						<p class="m-product__desc m-product__info-text">Underglaze on stoneware clay, chain, glass eye</p>
+						<p class="m-product__size m-product__info-text">34 x 33 x 33 cm</p>
+					</div>
+				</div>
+				<div class="m-product__item">
+					<label class="m-product__label" for="name">Name*</label>
+					<input class="m-product__input m-product__input-item" type="text" name="name" id="name" required>
+				</div>
+				<div class="m-product__item">
+					<label class="m-product__label" for="name">Email*</label>
+					<input class="m-product__input m-product__input-item" type="email" name="email" id="email" required>
+				</div>
+				<div class="m-product__item">
+					<label class="m-product__label" for="phone">Phone</label>
+					<input class="m-product__input m-product__input-item" type="number" name="phone" id="phone">
+				</div>
+				<div class="m-product__item">
+					<label class="m-product__label" for="message">Message</label>
+					<textarea class="m-product__input m-product__input-item m-product__message" type="text" name="message" id="message"></textarea>
+				</div>
+				<div class="m-product__item m-product__item-radios">
+					<p class="m-product__label">
+						Receive
+						newsletters*
+					</p>
+					<div class="m-product__radios m-product__input-item">
+						<label>
+							<input type="radio" name="newsletters"><span>Yes</span>
+						</label>
+						<label>
+							<input type="radio" name="newsletters"><span>No</span>
+						</label>
+					</div>
+				</div>
+				<button class="m-product__button button" type="submit">Send enquiry</button>
+				<p class="m-product__bottom">In order to respond to your enquiry, we will process the personal data you have supplied in accordance with our privacy policy (available on request). You can unsubscribe or change your preferences at any time by clicking the link in our emails.</p>
+			</form>
+		</div>
+		<div class="m-sub">
+			<div class="m-sub__close">×</div>
+			<form class="contacts__form">
+				<div class="contacts__f-items">
+					<div class="contacts__f-item">
+						<input type="text" name="m-name" placeholder="First name">
+					</div>
+					<div class="contacts__f-item">
+						<input type="text" name="m-lastname" placeholder="Last name">
+					</div>
+					<div class="contacts__f-item">
+						<input type="email" name="m-email" placeholder="Email">
+					</div>
+				</div>
+				<button class="contacts__form__button button" type="submit">Sign up</button>
+			</form>
+		</div>
 		<script src="js/libs.min.js?v=1.00"></script>
 		<script src="js/app.js?v=1.00"></script>
 	</body>

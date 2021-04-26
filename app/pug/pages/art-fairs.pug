@@ -3,8 +3,6 @@ extends ../layout/default
 block content
     .exhibitions.art-fairs.section
         ._block
-            h2.art-fairs__title.section__title Past
-
             ._items
                 - for(var i = 1; i < 5; i++)
                     a(href="#")._item
@@ -17,42 +15,51 @@ block content
 
                         ._date March 7, 2020 – May 30, 2020
 
-    .art-gallery.section
-        .g-slider
-            ._columns
-                ._column
+    //- .art-gallery.section
+    //-     .g-slider
+    //-         ._columns
+    //-             ._column
 
-                    ._buttons
-                        ._next.g-slider-1__next.swiper-button-next
-                            svg(width='45' height='8' viewBox='0 0 45 8' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                path(d='M44.3536 4.35355C44.5488 4.15829 44.5488 3.84171 44.3536 3.64645L41.1716 0.464466C40.9763 0.269204 40.6597 0.269204 40.4645 0.464466C40.2692 0.659728 40.2692 0.976311 40.4645 1.17157L43.2929 4L40.4645 6.82843C40.2692 7.02369 40.2692 7.34027 40.4645 7.53553C40.6597 7.7308 40.9763 7.7308 41.1716 7.53553L44.3536 4.35355ZM0 4.5H44V3.5H0V4.5Z' fill='black')
+    //-                 ._buttons
+    //-                     ._next.g-slider-1__next.swiper-button-next
+    //-                         svg(width='45' height='8' viewBox='0 0 45 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+    //-                             path(d='M44.3536 4.35355C44.5488 4.15829 44.5488 3.84171 44.3536 3.64645L41.1716 0.464466C40.9763 0.269204 40.6597 0.269204 40.4645 0.464466C40.2692 0.659728 40.2692 0.976311 40.4645 1.17157L43.2929 4L40.4645 6.82843C40.2692 7.02369 40.2692 7.34027 40.4645 7.53553C40.6597 7.7308 40.9763 7.7308 41.1716 7.53553L44.3536 4.35355ZM0 4.5H44V3.5H0V4.5Z' fill='black')
 
-                        ._prev.g-slider-1__prev.swiper-button-prev
-                            svg(width='45' height='8' viewBox='0 0 45 8' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                path(d='M44.3536 4.35355C44.5488 4.15829 44.5488 3.84171 44.3536 3.64645L41.1716 0.464466C40.9763 0.269204 40.6597 0.269204 40.4645 0.464466C40.2692 0.659728 40.2692 0.976311 40.4645 1.17157L43.2929 4L40.4645 6.82843C40.2692 7.02369 40.2692 7.34027 40.4645 7.53553C40.6597 7.7308 40.9763 7.7308 41.1716 7.53553L44.3536 4.35355ZM0 4.5H44V3.5H0V4.5Z' fill='black')
+    //-                     ._prev.g-slider-1__prev.swiper-button-prev
+    //-                         svg(width='45' height='8' viewBox='0 0 45 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+    //-                             path(d='M44.3536 4.35355C44.5488 4.15829 44.5488 3.84171 44.3536 3.64645L41.1716 0.464466C40.9763 0.269204 40.6597 0.269204 40.4645 0.464466C40.2692 0.659728 40.2692 0.976311 40.4645 1.17157L43.2929 4L40.4645 6.82843C40.2692 7.02369 40.2692 7.34027 40.4645 7.53553C40.6597 7.7308 40.9763 7.7308 41.1716 7.53553L44.3536 4.35355ZM0 4.5H44V3.5H0V4.5Z' fill='black')
 
-                ._column
-                    ._container.g-slider-1__container.swiper-container
+    //-             ._column
+    //-                 ._container.g-slider-1__container.swiper-container
 
-                        ._wrapper.swiper-wrapper
+    //-                     ._wrapper.swiper-wrapper
 
-                            - for(var i = 1; i < 5; i++)
-                                a(href='img/about-slider/' + i + '.jpg' data-fancybox="slider-gallery")._slide.swiper-slide
-                                    ._img-wrap
-                                        img(src='img/about-slider/' + i + '.jpg' alt="gallery")
+    //-                         - for(var i = 1; i < 5; i++)
+    //-                             a(href='img/about-slider/' + i + '.jpg' data-fancybox="slider-gallery")._slide.swiper-slide
+    //-                                 ._img-wrap
+    //-                                     img(src='img/about-slider/' + i + '.jpg' alt="gallery")
 
-                                    ._name Start art fair
-                                    ._location London, UK
+    //-                                 ._name Start art fair
+    //-                                 ._location London, UK
 
-                                    ._date September 26, 2019 – September 29, 2019
+    //-                                 ._date September 26, 2019 – September 29, 2019
 
-                    ._buttons
-                        ._next.g-slider-1__next.swiper-button-next
-                            svg(width='45' height='8' viewBox='0 0 45 8' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                path(d='M44.3536 4.35355C44.5488 4.15829 44.5488 3.84171 44.3536 3.64645L41.1716 0.464466C40.9763 0.269204 40.6597 0.269204 40.4645 0.464466C40.2692 0.659728 40.2692 0.976311 40.4645 1.17157L43.2929 4L40.4645 6.82843C40.2692 7.02369 40.2692 7.34027 40.4645 7.53553C40.6597 7.7308 40.9763 7.7308 41.1716 7.53553L44.3536 4.35355ZM0 4.5H44V3.5H0V4.5Z' fill='black')
+    //-                 ._buttons
+    //-                     ._next.g-slider-1__next.swiper-button-next
+    //-                         svg(width='45' height='8' viewBox='0 0 45 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+    //-                             path(d='M44.3536 4.35355C44.5488 4.15829 44.5488 3.84171 44.3536 3.64645L41.1716 0.464466C40.9763 0.269204 40.6597 0.269204 40.4645 0.464466C40.2692 0.659728 40.2692 0.976311 40.4645 1.17157L43.2929 4L40.4645 6.82843C40.2692 7.02369 40.2692 7.34027 40.4645 7.53553C40.6597 7.7308 40.9763 7.7308 41.1716 7.53553L44.3536 4.35355ZM0 4.5H44V3.5H0V4.5Z' fill='black')
 
-                        ._prev.g-slider-1__prev.swiper-button-prev
-                            svg(width='45' height='8' viewBox='0 0 45 8' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                path(d='M44.3536 4.35355C44.5488 4.15829 44.5488 3.84171 44.3536 3.64645L41.1716 0.464466C40.9763 0.269204 40.6597 0.269204 40.4645 0.464466C40.2692 0.659728 40.2692 0.976311 40.4645 1.17157L43.2929 4L40.4645 6.82843C40.2692 7.02369 40.2692 7.34027 40.4645 7.53553C40.6597 7.7308 40.9763 7.7308 41.1716 7.53553L44.3536 4.35355ZM0 4.5H44V3.5H0V4.5Z' fill='black')
+    //-                     ._prev.g-slider-1__prev.swiper-button-prev
+    //-                         svg(width='45' height='8' viewBox='0 0 45 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+    //-                             path(d='M44.3536 4.35355C44.5488 4.15829 44.5488 3.84171 44.3536 3.64645L41.1716 0.464466C40.9763 0.269204 40.6597 0.269204 40.4645 0.464466C40.2692 0.659728 40.2692 0.976311 40.4645 1.17157L43.2929 4L40.4645 6.82843C40.2692 7.02369 40.2692 7.34027 40.4645 7.53553C40.6597 7.7308 40.9763 7.7308 41.1716 7.53553L44.3536 4.35355ZM0 4.5H44V3.5H0V4.5Z' fill='black')
+
+    .about-slider.section
+        ._container.swiper-container
+            ._wrapper.swiper-wrapper
+
+                - for(var i = 1; i < 12; i++)
+                    a(href='img/about-slider/' + i + '.jpg' data-fancybox="slider-gallery" data-caption="This is a caption")._slide.swiper-slide
+                        img(src='img/about-slider/' + i + '.jpg' alt="gallery")
+
 
     include ../includes/partners
